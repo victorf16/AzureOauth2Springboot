@@ -1,0 +1,23 @@
+logging:
+  level:
+    root: DEBUG
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        provider: # Refs: https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2login-common-oauth2-provider
+          azure-active-directory:
+            issuer-uri: https://login.microsoftonline.com/<COLOCAR_TENANT_ID_AQUI>/v2.0 # Refs: https://docs.spring.io/spring-security/site/docs/current/reference/html5/#webflux-oauth2-login-openid-provider-configuration
+        registration:
+          springbootgroup:
+            provider: azure-active-directory #manter padrao
+            client-id: INSERIR_CLIENT_ID_AQUI
+            client-secret: INSERIR_SECRET_AQUI
+            scope: openid, profile
+            redirect-uri: http://localhost:8080/login/oauth2/code/ #insererir sua url para rediecionar
+
+
+  profiles:
+    active: develop
