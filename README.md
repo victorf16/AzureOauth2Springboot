@@ -20,7 +20,7 @@
 ## Passo 1 Ex: Criação  de usuário 
 Para Criação do princiapal que será utilizado no conecction do azure devops é necessário realizar o comando abaixo 
 
-az ad sp create-for-rbac --name MyPipeline --role Contributor --scopes "/subscriptions/2c81448w21********"
+az ad sp create-for-rbac --name springboot_app --role Contributor --scopes "/subscriptions/2c81448w21********"
 
 ![image](https://user-images.githubusercontent.com/28166733/227680438-fcf9c9a9-38f7-4045-bc9e-6e19af5625a6.png)
 
